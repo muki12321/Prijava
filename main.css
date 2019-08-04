@@ -1,0 +1,43 @@
+html, body{
+	margin: 0;
+	padding: 0;
+}
+h3{
+	text-align: center;
+	margin: 30px auto;
+	font-size: 2em;
+	font-family: 'Montserrat', sans-serif;
+}
+form {
+	width: 320px;
+	height: 120px;
+	background-color: gray;
+	margin: 10px auto;	
+}
+label {
+	float: left;
+	margin: 10px auto;
+	
+}
+span{
+	padding: 10px;
+	line-height: center;
+	font-size: 1.3em;
+	
+}
+.input{
+	float: right;
+	text-align: center;
+}
+#submit{
+	background-color: orange;
+	text-align: center;
+}
+#email{
+	margin-left: 30px;
+}
+	
+#btn{
+	margin: 10px auto;
+	float: right;
+}

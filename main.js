@@ -46,6 +46,10 @@ function validacija () {
 	//uspjesna prijava
 	if (uspjesnaPrijava == 1) {
 		window.location.assign('second.html');
+		// var div = document.createElement('div');
+		// div.style.width = '100px';
+		// div.style.height = '100px';
+		// div.style.background = 'red';
 	}
 }
 

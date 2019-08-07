@@ -58,11 +58,6 @@ function validacija () {
 	if (uspjesnaPrijava == 1) {
 		window.location.assign('second.html');
 		var data1 = email1.value;
-		
-
-		
-		
-		
 	}
 }
 
@@ -71,3 +66,6 @@ function clear () {
 	this.style.color = 'black';
 }
 
+function change () {
+	
+}

@@ -2,12 +2,22 @@ var email1 = document.getElementById('email');
 var pass = document.getElementById('password'); 
 var send = document.getElementById('submit');
 
-var uspjesnaPrijava;
+var users = [{email:'abdullahahmetovic@gmail.com', password: 'abdullah'},// index 0
+			 {email:'muhammed10@gmail.com', password: 'muhammed'}, // index 1
+			 {email:'ahmed321@gmail.com', password: 'ahmed'}, // index 2
+			 {email:'amar213@gmail.com', password: 'amar'}, // index 3
+			 {email:'mojemail@gmail.com', password: 'ja'}]; // index 4
 
-send.addEventListener('click', validacija);
+var uspjesnaPrijava;
 
 email.addEventListener('focus',clear);
 pass.addEventListener('focus',clear);
+
+email.addEventListener('onchange', change);
+pass.addEventListener('onchange', change);
+
+
+send.addEventListener('click', validacija);
 
 function validacija () {
 	uspjesnaPrijava = 1;
@@ -25,6 +35,7 @@ function validacija () {
 		email1.value = 'Email mora biti GMAIL'
 		uspjesnaPrijava = 0;
 	};
+
 	if (email1.value == '') {
 		email1.value = 'Ovo polje je obavezno';
 		//FIXME: it is not your job... to alert user in ant way --> DONE
@@ -46,10 +57,12 @@ function validacija () {
 	//uspjesna prijava
 	if (uspjesnaPrijava == 1) {
 		window.location.assign('second.html');
-		// var div = document.createElement('div');
-		// div.style.width = '100px';
-		// div.style.height = '100px';
-		// div.style.background = 'red';
+		var data1 = email1.value;
+		
+
+		
+		
+		
 	}
 }
 

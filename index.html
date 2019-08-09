@@ -4,10 +4,30 @@
 	<meta charset="UTF-8">
 	<title>Prijava</title>
 	<link rel="stylesheet" type="text/css" href="main.css">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
-	<h3>Prijava</h3> <hr>
+		<div id='log'>
+			<h3>Prijava</h3>
+			<form class = 'prijava'>
+				<label>
+					<span>Vas Email: </span>
+					<input type = 'email' id="email" placeholder = 'email'>
+				</label>
+				
+				<label>
+					<span>Vas Password: </span>
+					<input type = 'password' id="password" placeholder = 'password' >
+				</label>
+
+
+				<div >
+					<button id='logBtn'>Log</button>
+				</div>
+			</form>
+		</div>
+		<div class="hidden" id='page'>	
+			<div id="show"></div>
+			<button id="backBtn">Back</button>
 
 	<form action = 'second.html' method = 'post' class = 'prijava'>
 		<label>
@@ -23,8 +43,9 @@
 		<div id = 'btn'>
 			<input type = 'button' id = 'submit' value = 'Submit' class = 'input'>
 		</div>
-	</form>
+			
 
+	<script src="dummyusers.js"></script>
 	<script src = 'main.js'></script>
 </body>
 </html>

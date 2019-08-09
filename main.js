@@ -1,50 +1,32 @@
-var email1 = document.getElementById('email');
-var pass = document.getElementById('password'); 
-var send = document.getElementById('submit');
-var uspjesnaPrijava;
+const emailInput = document.getElementById('email');
+const passwordInput = document.getElementById('password'); 
+const send = document.getElementById('logBtn');
+const back = document.getElementById('backBtn');
 
-send.addEventListener('click', validacija);
-
-email.addEventListener('focus',clear);
-pass.addEventListener('focus',clear);
-
-function validacija () {
-	uspjesnaPrijava = 1;
-	//email 
-	//FIXME: it have to contains @ but not gmail... its optional 
-	//FIXME: use === instead of == everywhere, explain me why
+const log = document.getElementById('log');
+const page = document.getElementById('page');
+const show = document.getElementById('show');
 
 
+send.addEventListener('click',(e)=>{
+	e.preventDefault();
+	const email = emailInput.value;
+	const password = passwordInput.value;
 
-	if (email1.value.indexOf('gmail') == -1) {
-		email1.value = 'Email mora biti GMAIL'
-		uspjesnaPrijava = 0;
-	};
-	if (email1.value == '') {
-		email1.value = 'Ovo polje je obavezno';
-		//FIXME: it is not your job... to alert user in ant way
-		email1.style.color = 'red';
-		uspjesnaPrijava = 0;
-	};
-
-	//password
-	//FIXME: don't check if field is empty... just use html attribute 'required'
-	if (pass.value == '') {
-		//FIXME: ??? wrong way .... it must not use value for warnings
-		pass.value = 'Ovo polje je prazno';
-		//FIXME: ?????????
-		pass.style.color = 'red';
-		uspjesnaPrijava = 0;	
-	};
-
-	//uspjesna prijava
-	if (uspjesnaPrijava == 1) {
-		window.location.assign('second.html');
+	const user = useri.filter((user) => 
+		user.password + '' === password && user.email === email)
+	if (user.length !== 0) {
+		log.style.display = 'none';
+		page.style.display = 'block';
+		show.innerHTML = 'hi ' + user[0].email + ' ' + user[0].password;
 	}
-}
+});
 
-function clear () {
-	this.value = '';
-	this.style.color = 'black';
-}
+back.addEventListener('click',(e)=>{
+	e.preventDefault();
+	log.style.display = 'block';
+	page.style.display = 'none';
+	emailInput.value = '';
+	passwordInput.value = '';
 
+});
